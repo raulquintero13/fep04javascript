@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            margin-top: -20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+        #header{
+            margin: 0px;
+            padding: 10px;
+            height: 60px;
+            background-color: rgb(230, 9, 9);
+            color: white;
+            
+        }
+        #searchBar{
+            text-align:center;
+            height: 60px;
+            vertical-align: middle;
+        }
+        #main{
+            background: red;
+            width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        #data{
+
+            height:333px;
+        }
+        #footer{
+            margin: 0px;
+            padding: 10px;
+            height: 100px;
+            background-color: rgb(230, 9, 9);
+            color: white;
+            text-align: center;
+        }
+        #pokemonTbl{
+            width:100%;
+        }
+        #pokemonTbl td{
+            width: 33%;
+        }
+        #name{
+            font-size: 30px;
+            height:40px;
+            text-align: center;
+            font-weight:bold;
+        }
+        .label{
+            padding: 5px 15px 5px 15px;
+            /* background: rgb(86, 171, 241); */
+            margin: 2px;
+            background-color:  rgb(245 198 101 / 96%);
+            color: #645427;
+            /* border:none; */
+            border-radius: 5pt;
+            font-size:14px;
+            font-weight: bold;
+            
+        }
+        .td-right{
+            text-align: right;
+            vertical-align: top;
+            padding-top: 10px;
+            padding-right: 10px;
+            font-weight:bold;
+            border-right: 2px solid black;
+        }
+        .displayInfo{
+            display: none;
+
+        }
+        .td-info{
+            padding-top: 10px;
+            padding-left: 10px;
+
+        }
+        #pokeImg{
+            width:660px;
+        }
+        .td-right-img{
+            display: table-cell;
+        }
+        .show-images{
+            border: 1px solid #fccc05;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body >
+    <div id="main"> 
+
+        <section id="header">
+            
+            <h1>Pokedex LaunchX</h1>
+        </section>
+        <section id="searchBar">
+            <br>
+            <input type="text" placeholder="" id="pokeName" name="pokeName" value="pikachu">
+            <button onclick="fetchPokemon()">Buscar</button>
+        </section>
+        <section id="name">
+            <div id="pokeNameTitle">Busca tu </div>
+        </section>
+        <section id="data">
+            <table id="pokemonTbl" style="width:100%; "><tr>
+                <td>
+                    <table class="displayInfo">
+                        <tr><td class="td-right">ID</td><td id="pokeId" class="td-info"></td></tr>
+                        <tr><td class="td-right">Altura</td><td id="pokeHeight" class="td-info"></td></tr>
+                        <tr><td class="td-right">Peso</td><td id="pokeWeight" class="td-info"></td></tr>
+                        <tr><td class="td-right">Habilidades</td><td id="pokeAbilities" class="td-info"></td></tr>
+                        <tr><td class="td-right">Tipo</td><td id="pokeTypes" class="td-info"></td></tr>
+                        <tr><td class="td-right">Formas</td><td id="pokeForms" class="td-info"></td></tr>
+                    </table>
+                </td>
+                <td>
+                    <img src="./img/pokemonLogo.png" alt="Pokemon" id="pokeImg">
+
+                </td>
+                <td>
+                    <table class="displayInfo">
+                        <tr><td class="td-right">HP</td><td id="pokeHp" class="td-info"></td></tr>
+                        <tr><td class="td-right">Attack</td><td id="pokeAttack" class="td-info"></td></tr>
+                        <tr><td class="td-right">Defense</td><td id="pokeDefense" class="td-info"></td></tr>
+                        <tr><td class="td-right">Sp. Attack</td><td id="pokeSpAttack" class="td-info"></td></tr>
+                        <tr><td class="td-right">Sp. Defence</td><td id="pokeSpDefence" class="td-info"></td></tr>
+                        <tr><td class="td-right">Speed</td><td id="pokeSpeed" class="td-info"></td></tr>
+                        <tr><td class="td-right">Total</td><td id="pokeTotal" class="td-info"></td></tr>
+                    </table>
+                </td>
+            </tr></table>
+        </section>
+        <section id="footer">
+            <div id="showImages"></div>
+        </section>
+        
+    </div>
+    <script src="./utils.js"></script>
+    <script src="./pokedex.js"></script>
+</body>
+</html>
